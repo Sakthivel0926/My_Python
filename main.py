@@ -1,10 +1,24 @@
-import module
-import module1
+import math
+import math_operations
+import string_operations
 
-print("Addition:", module.add(10, 5))
-print("Subtraction:", module.subtract(10, 5))
-print("Multiplication:", module.multiply(10, 5))
+try:
+    num1 = int(input("Enter first number: "))
+    num2 = int(input("Enter second number: "))
 
-print(module1.greet("Sakthivel"))
-print(module1.uppercase("python"))
-print(module1.lowercase("MODULE"))
+    print("Addition:", math_operations.add(num1, num2))
+    print("Division:", math_operations.divide(num1, num2))
+
+    print("Square root of first number:", math.sqrt(num1))
+
+    name = input("Enter your name: ")
+    print(string_operations.greet(name))
+
+except ZeroDivisionError:
+    print("Error: Cannot divide by zero")
+
+except ValueError:
+    print("Error: Please enter valid numbers")
+
+finally:
+    print("Program executed successfully")
